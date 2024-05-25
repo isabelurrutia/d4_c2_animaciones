@@ -1,0 +1,101 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*ESTILOS PARA VERSION DE PANTALLA PEQUEÑA, HASTA 576PX INCLUSIVE*/
+.container{
+    width: 576px;
+    font-family: "Reddit Mono", monospace;
+    color: white;
+    background-color: #dcc7aa;
+    display: grid;
+    grid-template-areas: "header"
+    "nav"
+    "figure"
+    "article"
+    "section"
+    "footer";
+}
+
+/*ESTILOS HEADER*/
+header{
+    grid-area: header;
+    background-color:#f7c331;
+    color: #6b7abf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+header h1{
+    font-weight: 400;
+}
+
+/*ESTILOS NAV*/
+nav{
+    grid-area: nav;
+    background-color: white;
+    border-bottom: 5px solid #f7882f;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 10px;
+}
+nav a{
+    text-decoration: none;
+    color: #6b7abf;
+}
+nav img{
+    width: 50px;
+}
+
+/*ESTILOS FIGURE*/
+figure{
+    grid-area: figure;
+    padding: 40px 30px 60px 30px;
+}
+figure ul{
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+figure img{
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid #f7882f;;
+    box-shadow: 5px 5px 1px 0px #f7c331;
+}
+
+/*ESTILOS ARTICLE: HISTORIA*/
+article{
+    grid-area: article;
+    background-color: #f7882f;
+    padding: 40px 15px 60px 15px;
+    text-align: center;
+}
+article h2{
+    padding-bottom: 20px;
+}
+
+/*ESTILOS SECTION: COMPRAS*/
+section{
+    grid-area: section;
+    height: 300px;
+    background-color:#f7c331;
+}
+
+/*ESTILOS FOOTER*/
+footer{
+    grid-area: footer;
+    height: 100px;
+    background-color:#6b7abf;
+}
