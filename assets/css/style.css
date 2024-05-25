@@ -24,7 +24,7 @@
 header{
     grid-area: header;
     background-color:#f7c331;
-    color: #6b7abf;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,6 +61,12 @@ figure{
     grid-area: figure;
     padding: 40px 30px 60px 30px;
 }
+figure h2{
+    text-align: center;
+    padding-bottom: 20px;
+    color: #6b7abf;
+    font-weight: 500;
+}
 figure ul{
     list-style: none;
     display: flex;
@@ -71,8 +77,19 @@ figure ul{
 figure img{
     width: 100px;
     border-radius: 5px;
-    border: 2px solid #f7882f;;
-    box-shadow: 5px 5px 1px 0px #f7c331;
+    border: 2px solid #f7882f;
+    box-shadow: 5px 5px 1px 0px #f7882f;
+    background-color: #f7db8e;
+    filter: contrast(10%); transition: filter 1s ease;
+
+}
+figure img:hover{
+    width:200px;
+    filter: contrast(100%);
+    /*box-shadow: 5px 5px 1px 0px #efb810;
+    border: 4px solid #f9db4a;*/
+
+
 }
 
 /*ESTILOS ARTICLE: HISTORIA*/
@@ -85,17 +102,39 @@ article{
 article h2{
     padding-bottom: 20px;
 }
+article p{
+    text-align: justify;
+    padding: 15px;
+}
+article h3{
+    font-size: medium;
+    padding-top: 15px;
+}
 
 /*ESTILOS SECTION: COMPRAS*/
 section{
     grid-area: section;
-    height: 300px;
     background-color:#f7c331;
+    margin: 10px;
+    text-align: center;
+    padding: 40px 15px 60px 15px;
+}
+section img{
+    width: 200px;
+    padding: 15px;
 }
 
 /*ESTILOS FOOTER*/
 footer{
     grid-area: footer;
-    height: 100px;
     background-color:#6b7abf;
+    text-align: center;
+    padding: 10px;
+}
+footer div{
+    display: flex;
+    justify-content: center;
+}
+footer a{
+    margin: 10px;
 }
