@@ -5,11 +5,10 @@
     border: 0;
 }
 
-/*ESTILOS PARA VERSION DE PANTALLA PEQUEÑA, HASTA 576PX INCLUSIVE*/
+/***ESTILOS PARA VERSION DE PANTALLA PEQUEÑA, HASTA 576PX INCLUSIVE***/
 .container{
     font-family: "Reddit Mono", monospace;
     color: white;
-    background-color: #dcc7aa;
     display: grid;
     grid-template-areas: "header"
     "nav"
@@ -60,18 +59,15 @@ nav img{
 /*ESTILOS FIGURE*/
 figure{
     grid-area: figure;
-    padding: 40px 30px 60px 30px;
-}
-figure h2{
-    text-align: center;
-    padding-bottom: 20px;
-    color: #6b7abf;
-    font-weight: 500;
+    padding: 40px 30px 30px 30px;
+    background-color: #dcc7aa;
 }
 .gallery{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
+    
 }
 .card{
     width: 270px;
@@ -81,8 +77,10 @@ figure h2{
     background-color: #f7db8e;
     color: #6b7abf;
     padding: 15px;
-    margin-bottom: 20px;
     text-align: center;
+    transition:
+    background-color 2s,
+    border-radius 2s;
 }
 .card img{
     width: 200px;
@@ -92,15 +90,16 @@ figure h2{
 }
 .card button{
     background-color: #6b7abf;
-    color: white;
     padding: 10px;
     border-radius: 5px;
 }
-
+.card a{
+    text-decoration: none;
+    color: white;
+}
 .card:hover{
-    width:400px;
-    /*box-shadow: 5px 5px 1px 0px #efb810;
-    border: 4px solid #f9db4a;*/
+    background-color: white;
+    border-radius: 50%;
 }
 
 /*ESTILOS ARTICLE: HISTORIA*/
@@ -153,4 +152,75 @@ footer div{
 }
 footer a{
     margin: 10px;
+}
+
+/***ESTILOS PARA VERSION DE PANTALLA MEDIANA, HASTA 992PX INCLUSIVE***/
+@media (min-width: 577px){
+    .container{
+        grid-template-areas:
+        "nav header header header header header"
+        "nav figure figure figure figure figure"
+        "article article article article article article"
+        "section section section section section section"
+        "footer footer footer footer footer footer" ;
+    }
+    header{
+        background-color: white;
+        color: #6b7abf;
+    }
+    nav{
+        position:static;
+        background-color: #f7c331;
+        padding-bottom: 5px;
+        border-bottom: 0;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    nav img{
+        width: 150px;
+    }
+    nav li{
+        padding-bottom: 20px;
+    }
+    nav a{
+        font-size: large;
+        font-weight: bold;
+        color: white;
+    }
+    .card{
+        width: 200px;
+        padding: 5px;
+    }
+    .card p{
+        margin: 15px 0px 15px 0px;
+    }
+    .card img{
+        width: 130px;
+    }
+    article{
+        padding: 40px 200px 60px 200px;
+    }
+    article p{
+        text-align: center;
+        padding: 15px;
+    }
+    .gallery{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+/***ESTILOS PARA VERSION DE PANTALLA GRANDE, SOBRE 992PX ***/
+@media (min-width: 993px){
+    .card{
+        width: 240px;
+        padding: 5px;
+    }
+    .card img{
+        width: 170px;
+    }
 }
